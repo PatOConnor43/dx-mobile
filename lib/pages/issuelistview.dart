@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:dx_mobile/pages/emptyissuelistview.dart';
 import 'package:flutter/material.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
@@ -54,7 +55,7 @@ class IssueListViewState extends State<IssueListView> {
               onRefresh: _refreshIssueList,
               controller: rc,
               child: ListView(
-                children: <Widget>[Text('No issues for you!')],
+                children: <Widget>[EmptyIssueListView()],
               ),
             );
     } else {
